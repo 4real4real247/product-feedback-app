@@ -1,12 +1,18 @@
-import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NewSuggestionForm from "./pages/NewSuggestionForm";
+import Suggestionspage from "./pages/Suggestionspage";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <h1>Product Feedback Full-Stack App</h1>
-    </>
+    <Router>
+      <Routes>
+        {/* Home route that displays all suggestions */}
+        <Route path="/" element={<Suggestionspage />} />
+
+        {/* Route to add a new suggestion */}
+        <Route path="/new" element={<NewSuggestionForm />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

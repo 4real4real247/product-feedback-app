@@ -1,6 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  color: #353a74;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4641b5;
+  letter-spacing: -0.5px;
+}
+.field-title {
+  font-size: 1.1rem;
+  color: #3a4374;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.field-helper {
+  color: #647196;
+  font-size: 0.97rem;
+  margin-bottom: 8px;
+}
+
+/* Buttons with similar styles */
+.add-button,
+.submit-button {
+  background-color: #af71fa;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(175, 113, 250, 0.08);
+  border: none;
+}
+
+/* Cancel button */
+.cancel-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #3a4374;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Back link styling */
+.go-back-link {
+  color: #4661e6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-button {
+  text-decoration: none;
+}
+
+.submit-button {
+  cursor: pointer;
+}
+
+.add-button:hover,
+.submit-button:hover {
+  background-color: #661bfc;
+  box-shadow: 0 4px 12px rgba(102, 27, 252, 0.12);
+}
+
+.circle-plus {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ad1fea 0%, #6629ea 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(54, 78, 126, 0.15);
+  position: relative;
+  top: 0;
+  margin: 16px 0; /* vertical space only, no left/right centering */
+  z-index: 2;
+}
+.circle-plus .plus {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  user-select: none;
+}
+
+.category-button.selected {
+  background-color: #661bfc;
+  color: white;
+  border-color: #661bfc;
+  font-weight: 600;
+}
+
+.card {
+  border: 1px solid #eaecf0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(76, 81, 121, 0.07);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4641b5;
+}
+
+.card-description {
+  color: #4c5179;
+}
+
+.card-category {
+  font-size: 0.875rem;
+  color: #af71fa;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.input,
+.textarea,
+select {
+  width: 100%;
+  padding: 16px; /* more space for better look */
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid #eaecf0;
+  background-color: #f6f8fa;
+  font-size: 1rem;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #af71fa;
+  outline: none;
+}
+
+.input.error,
+.textarea.error {
+  border-color: #ff4b58;
+}
+
+.error {
+  color: #ff4b58;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  color: #4c5179;
+  padding: 3rem 0;
+}
+
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #af71fa;
+  letter-spacing: -0.25px;
+  margin-bottom: 0.375rem;
+}
+
+.empty-subtext {
+  font-size: 0.95rem;
+  color: #4c5179;
+  opacity: 0.9;
+}
+
+/* Container for pills: flex-wrap enabled to wrap on small widths */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px; /* small gap between pills */
+  margin-bottom: 8px;
+}
+
+/* Pill buttons style */
+.pill-button {
+  background: #f3f3f9;
+  color: #444;
+  border: none;
+  padding: 0.4em 1em; /* slightly smaller vertical padding */
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.875rem; /* smaller font to save space */
+  font-weight: 500;
+  flex-shrink: 0; /* prevent shrinking to weird sizes */
+  min-width: 50px; /* optional: minimum width for uniformity */
+  text-align: center;
+}
+
+/* Selected pill highlighting */
+.pill-button.selected {
+  background: #725cff;
+  color: #fff;
+}
+
+/* Focus outline for accessibility */
+.pill-button:focus {
+  outline: 2px solid #b8aaff;
+}
+
+/* SUGGESTIONS PAGE  */
+.suggestions-layout {
+  min-height: 100vh;
+  background: #f8f8f8;
+  display: flex;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 300px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand-card {
+  background: linear-gradient(135deg, #af71fa 0%, #661bfc 100%);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(102, 27, 252, 0.1);
+  margin-bottom: 8px;
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.75px;
+  margin-bottom: 2px;
+}
+
+.brand-subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  opacity: 0.92;
+}
+
+.filter-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 1px 6px rgba(175, 113, 250, 0.04);
+}
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.tag-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.suggestions-header {
+  background: #353a74;
+  border-radius: 12px;
+  padding: 1rem 2rem 1rem 1.75rem;
+  color: #fff;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestions-count {
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.2px;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.suggestion-card {
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(76, 81, 121, 0.07);
+  border: 1px solid #eaecf0;
+  padding: 28px 28px 22px 24px;
+}
+
+.suggestion-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #393fc5;
+  margin-bottom: 7px;
+}
+
+.suggestion-description {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+/* Pill common */
+.tag-pill {
+  background: #f2f2ff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 9999px;
+  padding: 4px 16px;
+  margin: 0;
+  display: inline-block;
+}
+
+.tag-enhancement {
+  color: #4318ff;
+}
+
+.tag-bug {
+  color: #ff4b58;
+}
+
+.tag-feature {
+  color: #af71fa;
+}
+
+/* Smaller pills in sidebar */
+.filter-card .tag-pill {
+  font-size: 13px;
+  padding: 4px 14px;
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 32px rgba(54, 78, 126, 0.12);
+  width: 540px;
+  max-width: 90vw;
+  margin: 64px auto;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .suggestions-layout {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 0 0 24px 0;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
 }
