@@ -8,13 +8,10 @@ import express from "express";
 // Import (load) the PostgreSQL connection library so we can connect and interact with the database.
 import pg from "pg";
 
-// Import configuration settings such as database url and secrets from a configuration file.
-import config from "./config.js";
-
 // Create a connection pool to PostgreSQL using the url and SSL from settings,
 // so our app can talk to the database efficiently.
 const db = new pg.Pool({
-  connectionString: config.databaseUrl, // Use the database connection string from the config file.
+  connectionString: process.env.DATABASE_URL, // Use the database connection string from the config file.
   ssl: true, // Uses encrypted connection for security.
 });
 
