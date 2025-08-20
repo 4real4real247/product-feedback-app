@@ -47,23 +47,23 @@
 
 ## Frontend
 
-### • React (built with Vite)
+#### • React (built with Vite)
 
-### • HTML, CSS, JavaScript
+#### • HTML, CSS, JavaScript
 
-### • Deployed on Netlify
+#### • Deployed on Netlify
 
 ## Backend
 
-### • Node.js with Express
+#### • Node.js with Express
 
-### • Deployed on Render
+#### • Deployed on Render
 
-### • Endpoints:
+#### • Endpoints:
 
-### Database
+#### Database
 
-### • PostgreSQL (hosted on Neon)
+#### • PostgreSQL (hosted on Neon)
 
 ## API'S
 
@@ -101,28 +101,28 @@
 
 ## 💭 Reflections
 
-### • What I learned: How to set up a frontend and backend to work together, and how to connect to a database.
+#### • What I learned: How to set up a frontend and backend to work together, and how to connect to a database.
 
-### • What I’m proud of: Getting the form, filters, and database working smoothly.
+#### • What I’m proud of: Getting the form, filters, and database working smoothly.
 
-### • Challenges: Fixing backend errors and matching my database queries to the schema.
+#### • Challenges: Fixing backend errors and matching my database queries to the schema.
 
-### • Future ideas: Add upvotes, sort by most popular suggestions, and maybe even add user accounts.
+#### • Future ideas: Add upvotes, sort by most popular suggestions, and maybe even add user accounts.
 
 ## 🙌 Credits
 
-### These resources really helped me while building this project:
+####These resources really helped me while building this project:
 
-### • React Docs – for learning how to structure and manage components
+#### • React Docs – for learning how to structure and manage components
 
-### • Express Docs – for setting up backend routes and middleware
+#### • Express Docs – for setting up backend routes and middleware
 
-### • PostgreSQL Docs – for writing queries and managing my database
+#### • PostgreSQL Docs – for writing queries and managing my database
 
-### • Neon – for hosting my PostgreSQL database in the cloud
+#### • Neon – for hosting my PostgreSQL database in the cloud
 
-### • MDN Web Docs – great reference for JavaScript, HTML, and CSS
+#### • MDN Web Docs – great reference for JavaScript, HTML, and CSS
 
-### • Stack Overflow – for troubleshooting random errors along the way
+#### • Stack Overflow – for troubleshooting random errors along the way
 
-### Last but not Least My classmate Makeba C. and my instructor Arianna
+#### Last but not Least My classmate Makeba C. and my instructor Arianna
