@@ -10,7 +10,8 @@
 
 ## 🚀 Live Site
 
-Check out the live site here
+(Check out the live site here)
+[https://product-feedback-chill.netlify.app/]
 
 ⸻
 
