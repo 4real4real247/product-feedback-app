@@ -44,7 +44,7 @@ Check out the live site here
 
 ## 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 
 ### • React (built with Vite)
 
@@ -52,7 +52,7 @@ Check out the live site here
 
 ### • Deployed on Netlify
 
-### Backend
+## Backend
 
 ### • Node.js with Express
 
@@ -64,7 +64,7 @@ Check out the live site here
 
 ### • PostgreSQL (hosted on Neon)
 
-### API'S
+## API'S
 
 ### • GET /get-all-suggestions → get all feedback
 
@@ -98,7 +98,7 @@ Check out the live site here
 }
 ```
 
-### 💭 Reflections
+## 💭 Reflections
 
 ### • What I learned: How to set up a frontend and backend to work together, and how to connect to a database.
 
@@ -108,7 +108,7 @@ Check out the live site here
 
 ### • Future ideas: Add upvotes, sort by most popular suggestions, and maybe even add user accounts.
 
-### 🙌 Credits
+## 🙌 Credits
 
 ### These resources really helped me while building this project:
 
