@@ -111,7 +111,7 @@
 
 ## 🙌 Credits
 
-####These resources really helped me while building this project:
+#### These resources really helped me while building this project:
 
 #### • React Docs – for learning how to structure and manage components
 
